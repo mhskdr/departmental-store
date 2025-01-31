@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,7 +28,7 @@
         theme: {
           extend: {
             colors: {
-              clifford: "#da373d",
+              accent: "#179800",
             },
             fontFamily: {
               sora: ["Sora", "serif"],
@@ -40,9 +40,152 @@
   </head>
   <body class="font-sora">
     <header>
-      <nav></nav>
+      <nav
+        class="container mx-auto border border-green-500 md:border-0 lg:border-0 p-4"
+      >
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <a><img src="assets/logo-header.png" alt="logo-header" /></a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Product</a></li>
+              <li>
+                <details>
+                  <summary>Services</summary>
+                  <ul class="p-2">
+                    <li><a>Home Delivery</a></li>
+                    <li><a>Sell Vegetables</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end gap-4">
+            <a class="hidden lg:block" href=""
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></a>
+            <a class="hidden lg:block" href=""
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+            <a
+              class="btn border-green-500 bg-white text-black hidden lg:block lg:flex lg:items-center lg:justify-center"
+              >Login</a
+            >
+            <a
+              class="btn bg-accent text-white hidden lg:block lg:flex lg:items-center lg:justify-center"
+              >Register</a
+            >
+            <div class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Product</a></li>
+                <li>
+                  <a>Services</a>
+                  <ul class="p-2">
+                    <li><a>Home Delivery</a></li>
+                    <li><a>Sell Vegetables</a></li>
+                  </ul>
+                </li>
+                <li><a>Contact Us</a></li>
+                <li>
+                  <a><i class="fa-solid fa-magnifying-glass"></i></a>
+                </li>
+                <li>
+                  <a><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                <li>
+                  <a class="btn mx-10 border-green-500 bg-white text-black"
+                    >Login</a
+                  >
+                </li>
+                <li><a class="btn mx-10 bg-accent text-white">Register</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main></main>
+    <main>
+      <!-- linear-bg -->
+      <section class="bg-gradient-to-t from-orange-100 to-white h-full mb-28">
+        <!-- banner -->
+        <div class="container mx-auto">
+          <!-- banner Headings -->
+          <div class="text-center m-8">
+            <h2 class="text-5xl font-bold mb-4">
+              Freshness
+              <span class="text-accent">You Can<br />Count </span>On,Prices
+              You'll Love!
+            </h2>
+            <p>
+              Shop your daily essentials at unbeatable prices. From fresh
+              produce to pantry staples, we have got you covered every day!
+            </p>
+          </div>
+          <!-- banner profile picture -->
+          <div class="flex justify-center">
+            <img src="assets/hero-vegetables.png" alt="Vegetables" />
+          </div>
+        </div>
+      </section>
+      <!-- 3-card -->
+      <section class="container mx-auto">
+        <div>
+          <h3 class="text-accent font-bold text-4xl mb-12">Services</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-orange-100 p-8 flex flex-col items-center text-center rounded-2xl">
+            <img class="bg-white rounded-full p-4 my-5" src="assets/service.png" alt="24/7 logo" />
+            <h2 class="my-5 font-semibold text-2xl">24/7 Services</h2>
+            <p class="text-stone-500">
+              🌟 Fresh and crisp, around the clock! Visit us anytime, we're your
+              24/7 vegetable store! 🥦
+            </p>
+          </div>
+          <div class="bg-orange-100 p-8 flex flex-col items-center text-center rounded-2xl">
+            <img class="bg-white rounded-full p-4 my-5"src="assets/delivery.png" alt="fast delivery logo" />
+            <h2 class="my-5 font-semibold text-2xl">Fast delivery</h2>
+            <p class="text-stone-500">
+              🚀 Fresh veggies, delivered fast! Experience the quickest delivery
+              straight to your doorstep! 🥕
+            </p>
+          </div>
+          <div class="bg-orange-100 p-8 flex flex-col items-center text-center rounded-2xl" >
+            <img class="bg-white rounded-full p-4 my-5" src="assets/healthy.png" alt="Healthy logo" />
+            <h2 class="my-5 font-semibold text-2xl">Healthy Products</h2>
+            <p class="text-stone-500">
+              🌱 Fresh, 100% healthy vegetables! Experience nature's best with
+              our top-quality, natural produce delivered right to your door!
+              🥦🍅
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- popular-section -->
+       <section class="bg-orange-100">
+        <div class="container mx-auto"></div>
+       </section>
+    </main>
     <footer></footer>
   </body>
 </html>
